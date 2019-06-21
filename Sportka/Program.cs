@@ -11,6 +11,12 @@ namespace Sportka
     {
         static void Main(string[] args)
         {
+
+            int[] common = CommonNumbers(new int[] { 1, 2, 3, 4, 5, 6 }, new int[] { 1, 3, 5, 7, 9, 11 });
+            Console.WriteLine(string.Join(",", common));
+            Console.ReadKey();
+            return;
+
             int startYear = ReadInt("Zadej počáteční rok");
             int startWk = ReadInt("Zadej počáteční týden v roce");
             int endYear = ReadInt("Zadej konečný rok");
@@ -89,6 +95,37 @@ namespace Sportka
             }
 
             return mostFreq;
+        }
+
+        static int[] CommonNumbers(int[] nums1, int[] nums2)
+        {
+            //List<int> result = new List<int>();
+            //foreach (int n1 in nums1)
+            //{
+            //    foreach (int n2 in nums2)
+            //    {
+            //        if (n2 == n1 && !result.Contains(n1))
+            //        {
+            //            result.Add(n1);
+            //        }
+
+            //    }
+            //}
+            //foreach (int n2 in nums2)
+            //{
+            //    foreach (int n1 in nums1)
+            //    {
+            //        if (n2 == n1 && !result.Contains(n1))
+            //        {
+            //            result.Add(n1);
+            //        }
+
+            //    }
+            //}
+
+            //return result.ToArray();
+            
+            return nums1.Intersect(nums2).ToArray();
         }
     }
 }
