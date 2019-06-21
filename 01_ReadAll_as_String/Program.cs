@@ -10,7 +10,7 @@ namespace _01_ReadAll_as_String
     {
         static void Main(string[] args)
         {
-            //zavinac pred uvozovkou znamena dosolvny retezec - neni treba escapovat \ apod.
+            // zavinac pred uvozovkou znamena doslovny retezec - neni treba escapovat \ apod.
             string path = @"C:\Users\Public\TestFolder\testfile.txt";
             string text = System.IO.File.ReadAllText(path);           
             Console.WriteLine("Obsah souboru {0} : {1}", path, text);

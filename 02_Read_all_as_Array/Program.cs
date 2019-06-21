@@ -14,7 +14,7 @@ namespace _02_Read_all_as_Array
 
             string[] lines = System.IO.File.ReadAllLines(path);
 
-            Console.WriteLine("Contents of WriteLines2.txt = ");
+            Console.WriteLine("Contents of testfile.txt = ");
             foreach (string line in lines)
             {
                 // Use a tab to indent each line of the file.

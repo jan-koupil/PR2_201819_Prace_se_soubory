@@ -19,23 +19,23 @@ namespace _08_StreamWriter
             using (System.IO.StreamWriter file =
                 new System.IO.StreamWriter(@"C:\Users\Public\TestFolder\StreamWriter.txt"))
             {
-                // Zapíšeme jen sudé řádky.
-                for (int i = 0; i < radky.Length; i++)
-                {
-                    if (i % 2 == 0)
-                    {
-                        file.WriteLine(radky[i]);
-                    }
-                }
-
-                // Zapíšeme řádky, které neobsahují slovo "Druhý"
-                //foreach (string radek in radky)
+                //// Zapíšeme jen liché řádky.
+                //for (int i = 0; i < radky.Length; i++)
                 //{
-                //    if (!radek.Contains("Druhý"))
+                //    if (i % 2 == 0)
                 //    {
-                //        file.WriteLine(radek);
+                //        file.WriteLine(radky[i]);
                 //    }
                 //}
+
+                // Zapíšeme řádky, které neobsahují slovo "Druhý"
+                foreach (string radek in radky)
+                {
+                    if (!radek.Contains("Druhý"))
+                    {
+                        file.WriteLine(radek);
+                    }
+                }
 
             }
 

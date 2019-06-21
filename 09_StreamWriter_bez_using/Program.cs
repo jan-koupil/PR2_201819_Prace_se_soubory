@@ -17,9 +17,7 @@ namespace _09_StreamWriter_bez_using
 
             foreach (string radek in radky)
             {
-
                 file.WriteLine(radek);
-
             }
 
             Console.WriteLine("Soubor ještě není uzavřen! Stiskněte ENTER.");
